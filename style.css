@@ -2065,20 +2065,38 @@ body {
         font-size: 20px;
     }
 }
-/* Mobile devices ke liye */
+/* Mobile screen fix (Screen size 768px se niche) */
 @media (max-width: 768px) {
-  header {
-    padding: 10px;
-  }
+    
+    /* 1. Header ko upar bhejney ke liye position theek karein */
+    header, nav {
+        position: relative !important; /* Fixed ya sticky hata dega */
+        height: auto !important;
+        padding: 10px 0;
+    }
 
-  /* Links ko hide karein jo list mein hain */
-  .nav-links {
-    display: none; /* Inhein ek button ke click par dikhayein */
-  }
+    /* 2. Menu links ko ek line mein ya hide karne ke liye */
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 0;
+    }
 
-  /* Search bar aur buttons ki width adjust karein */
-  input[type="text"], .login-btn, .signup-btn {
-    width: 90%;
-    margin: 5px auto;
-  }
+    nav ul li {
+        font-size: 14px; /* Text chota kar dega */
+    }
+
+    /* 3. Search bar aur buttons ko ek dusre ke niche set karein */
+    input[type="search"], .login-btn, .signup-btn, button {
+        width: 90% !important;
+        margin: 5px auto !important;
+        display: block !important;
+    }
+
+    /* 4. Logo ka size adjust karein */
+    .logo img {
+        max-width: 50px;
+    }
 }
