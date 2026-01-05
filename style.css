@@ -2065,55 +2065,55 @@ body {
         font-size: 20px;
     }
 }
-/* Mobile screen fix (Screen size 768px se niche) */
+/* --- Desktop/Laptop View (Default) --- */
+#menu-icon { display: none; } /* Hide hamburger on laptop */
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.nav-links { display: flex; gap: 20px; }
+
+/* --- Mobile View (Screens smaller than 768px) --- */
 @media (max-width: 768px) {
-    
-    /* 1. Header ko upar bhejney ke liye position theek karein */
-    header, nav {
-        position: relative !important; /* Fixed ya sticky hata dega */
-        height: auto !important;
-        padding: 10px 0;
+    #menu-icon {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
     }
 
-    /* Mobile view settings */
-@media (max-width: 768px) {
-  .menu-btn {
-    display: block; /* Hamburger button dikhayen */
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-  }
+    .nav-links {
+        display: none; /* Hide menu by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
 
-  /* Links ko pehle screen se bahar rakhein */
-  nav ul {
-    position: fixed;
-    top: 80px;
-    left: -100%;
-    background: #111;
-    height: 100vh;
-    width: 100%;
-    display: block;
-    text-align: center;
-    transition: all 0.3s ease;
-    z-index: 1000;
-  }
+    /* Show menu when checkbox is checked */
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
 
-  /* Jab checkbox click ho toh menu ander aa jaye */
-  #click:checked ~ ul {
-    left: 0;
-  }
+    /* Stack sections vertically on mobile */
+    #sec2, #prosec2, #prosec3, .footer-content {
+        flex-direction: column !important;
+    }
 
-  nav ul li {
-    margin: 40px 0;
-  }
+    .abcolumn1, .abcolumn2, .procolumn1, .procolumn2, .footer-column {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
 
-  nav ul li a {
-    font-size: 20px;
-    display: block;
-  }
-  
-  /* Checkbox ko hide rakhein */
-  #click {
-    display: none;
-  }
+    /* Adjust font sizes for smaller screens */
+    h1 { font-size: 24px; }
+    #box h1 { font-size: 28px; }
 }
