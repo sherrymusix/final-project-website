@@ -2075,28 +2075,45 @@ body {
         padding: 10px 0;
     }
 
-    /* 2. Menu links ko ek line mein ya hide karne ke liye */
-    nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        padding: 0;
-    }
+    /* Mobile view settings */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block; /* Hamburger button dikhayen */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
 
-    nav ul li {
-        font-size: 14px; /* Text chota kar dega */
-    }
+  /* Links ko pehle screen se bahar rakhein */
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
 
-    /* 3. Search bar aur buttons ko ek dusre ke niche set karein */
-    input[type="search"], .login-btn, .signup-btn, button {
-        width: 90% !important;
-        margin: 5px auto !important;
-        display: block !important;
-    }
+  /* Jab checkbox click ho toh menu ander aa jaye */
+  #click:checked ~ ul {
+    left: 0;
+  }
 
-    /* 4. Logo ka size adjust karein */
-    .logo img {
-        max-width: 50px;
-    }
+  nav ul li {
+    margin: 40px 0;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+    display: block;
+  }
+  
+  /* Checkbox ko hide rakhein */
+  #click {
+    display: none;
+  }
 }
