@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo"><a href="index.html"><img src="Adobe Express - file (1).png" alt=""></a></div>
+        <div class="text"><a href="index.html">Home</a></div>
+        <div class="text"><a href="gallery.html">Gallery</a></div>
+        <div class="text"><a href="about .html">About us</a></div>
+        <div class="text"><a href="contact.html">Contact us</a></div>
+        <input type="checkbox" id="search-toggle" hidden>
+        <label for="search-toggle" id="icon">
+            <i class="ri-search-line"></i>
+        </label>
+        <div class="search-box">
+            <input type="text" placeholder="Search projects...">
+        </div>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn login-btn">Login</a>
+            <a href="signup.html" class="btn signup-btn">Sign Up</a>
+        </div>
+    </div>
+    <div id="fakeheader"></div>
+    <div id="registration">
+        <h1>Project Registration Form</h1>
+        <p class="subtitle">Register your complete team for Science Fair Exhibition</p>
+        <form action="challan.html" method="get">
+            <div class="form-section">
+                <h2>Team Information</h2>
+                <label>Team Name</label>
+                <input type="text" required>
+                <label>Institute / University</label>
+                <input type="text" required>
+            </div>
+            <div class="form-section">
+                <h2>Project Information</h2>
+                <label>Project Title</label>
+                <input type="text" required>
+                <label>Project Category</label>
+                <select required>
+                    <option value="">Select Category</option>
+                    <option>Physics</option>
+                    <option>Chemistry</option>
+                    <option>Biology</option>
+                    <option>Robotics</option>
+                    <option>Environmental Science</option>
+                    <option>Computer Science</option>
+                </select>
+            </div>
+            <div class="form-section">
+                <div class="form-section">
+                    <h2>Team Members Details</h2>
+                    <div class="member-box">
+                        <h3>Member 1 (Leader)</h3>
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="number" placeholder="Age (18–30)" min="18" max="30" required>
+                        <input type="e-mail" placeholder="e-mail" required>
+                        <select required>
+                            <option value="">Gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="member-box">
+                        <h3>Member 2</h3>
+                        <input type="text" placeholder="Full Name">
+                        <input type="number" placeholder="Age (18–30)" min="18" max="30">
+                        <input type="e-mail" placeholder="e-mail">
+                        <select>
+                            <option value="">Gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="member-box">
+                        <h3>Member 3</h3>
+                        <input type="text" placeholder="Full Name">
+                        <input type="number" placeholder="Age (18–30)" min="18" max="30">
+                        <input type="e-mail" placeholder="e-mail">
+                        <select>
+                            <option value="">Gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="member-box">
+                        <h3>Member 4</h3>
+                        <input type="text" placeholder="Full Name">
+                        <input type="number" placeholder="Age (18–30)" min="18" max="30">
+                        <input type="e-mail" placeholder="e-mail">
+                        <select>
+                            <option value="">Gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="member-box">
+                        <h3>Member 5</h3>
+                        <input type="text" placeholder="Full Name">
+                        <input type="number" placeholder="Age (18–30)" min="18" max="30">
+                        <input type="e-mail" placeholder="e-mail">
+                        <select>
+                            <option value="">Gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <label>
+                <input type="checkbox" required>
+                I agree to pay registration fee
+            </label>
+            <button type="submit" class="reg-btn">
+                Generate Challan
+            </button>
+        </form>
+    </div>
+</body>
+
+</html>
