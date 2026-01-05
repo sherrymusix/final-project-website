@@ -2065,3 +2065,20 @@ body {
         font-size: 20px;
     }
 }
+/* Mobile devices ke liye */
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  /* Links ko hide karein jo list mein hain */
+  .nav-links {
+    display: none; /* Inhein ek button ke click par dikhayein */
+  }
+
+  /* Search bar aur buttons ki width adjust karein */
+  input[type="text"], .login-btn, .signup-btn {
+    width: 90%;
+    margin: 5px auto;
+  }
+}
